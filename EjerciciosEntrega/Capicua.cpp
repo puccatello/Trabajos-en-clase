@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
     int n,x;
-    cout <<"El programa analiza si un número al verse de abajo para arriba es un capicúa reversible."<<endl;
+    cout <<"El programa analiza si un número al verse de abajo para arriba es un número reversible."<<endl;
     cout << "Ingrese la cantidad de dígitos de su número " ;
     cin >> n;
     int numero[n];
@@ -29,7 +29,7 @@ int main()
     }
 
     if (x ==n){
-        cout << "Tu número si tiene capicuas reversibles."<<endl;
+        cout << "Tu número si tiene un número reversibles."<<endl;
         cout <<"Tu nuevo número es ";
         for (int i = 0; i < n; i++){
             if(numero[i] == 0){
@@ -64,5 +64,5 @@ int main()
         }
 
     }
-    else{ cout << "No tiene capicuas reversibles."<<endl;}
+    else{ cout << "No tiene número reversible."<<endl;}
 }

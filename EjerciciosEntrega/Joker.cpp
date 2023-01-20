@@ -6,6 +6,7 @@
 
 using namespace std;
 int main(){
+    cout <<"Bienvenido al JOKER de la primitiva. El sistema te generará un boleto aleatorio y luego se hará el sorteo, si tienes 7 aciertos ¡GANAS! Entonces, buena suerte."<<endl;
     int i, iguales, n,m, resta, x;
     n=7;
     m=7;
