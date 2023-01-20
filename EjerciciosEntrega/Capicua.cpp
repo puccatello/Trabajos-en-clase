@@ -7,6 +7,7 @@ using namespace std;
 int main()
 {
     int n,x;
+    cout <<"El programa analiza si un número al verse de abajo para arriba es un capicúa reversible."<<endl;
     cout << "Ingrese la cantidad de dígitos de su número " ;
     cin >> n;
     int numero[n];

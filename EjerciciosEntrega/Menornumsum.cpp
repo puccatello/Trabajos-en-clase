@@ -9,7 +9,7 @@ int main()
     int n,x, suma;
     cout << "Ingrese la cantidad de dígitos de su número " ;
     cin >> n;
-    int numero[n];
+    int numero[10];
     suma=0;
    for (int i = 0; i < n; i++)
     {
