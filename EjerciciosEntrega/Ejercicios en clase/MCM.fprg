@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="paula"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-22 04:17:01 p.&#160;m."/>
+        <attribute name="created" value="cGF1bGE7TEFQVE9QLVEwTkk3SkxFOzIwMjItMTEtMjI7MDQ6MDc6NTYgcC7CoG0uOzMxODg="/>
+        <attribute name="edited" value="cGF1bGE7TEFQVE9QLVEwTkk3SkxFOzIwMjItMTEtMjI7MDQ6MTc6MDEgcC7CoG0uOzE7MzI4Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, mayor" type="Integer" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <if expression="a&gt;b">
+                <then>
+                    <assign variable="mayor" expression="a"/>
+                </then>
+                <else>
+                    <assign variable="mayor" expression="b"/>
+                </else>
+            </if>
+            <while expression="(mayor%a!=0)||(mayor%b!=0)">
+                <assign variable="mayor" expression="mayor+1"/>
+            </while>
+            <output expression="mayor" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

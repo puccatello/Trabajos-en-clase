@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="paula"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-03 08:57:12 a.&#160;m."/>
+        <attribute name="created" value="cGF1bGE7TEFQVE9QLVEwTkk3SkxFOzIwMjMtMDItMDM7MDg6NDk6MzAgYS7CoG0uOzMxNzU="/>
+        <attribute name="edited" value="cGF1bGE7TEFQVE9QLVEwTkk3SkxFOzIwMjMtMDItMDM7MDg6NTc6MTIgYS7CoG0uOzI7MzI4Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n1, n2, n3, num, i" type="Integer" array="False" size=""/>
+            <assign variable="n1" expression="0"/>
+            <assign variable="n2" expression="1"/>
+            <output expression="&quot;Ingrese la cantidad de numeros de su serie de Fibonacci&quot;" newline="True"/>
+            <input variable="num"/>
+            <output expression="n1" newline="True"/>
+            <output expression="n2" newline="True"/>
+            <for variable="i" start="0" end="num" direction="inc" step="1">
+                <assign variable="n3" expression="n1+n2"/>
+                <output expression="n3" newline="True"/>
+                <assign variable="n1" expression="n2"/>
+                <assign variable="n2" expression="n3"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

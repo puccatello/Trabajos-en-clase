@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="paula"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-22 04:07:52 p.&#160;m."/>
+        <attribute name="created" value="cGF1bGE7TEFQVE9QLVEwTkk3SkxFOzIwMjItMTEtMTg7MDk6MDQ6NDggYS7CoG0uOzMxODE="/>
+        <attribute name="edited" value="cGF1bGE7TEFQVE9QLVEwTkk3SkxFOzIwMjItMTEtMjI7MDQ6MDc6NTIgcC7CoG0uOzI7MzI5Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="k, n, m, z, j, i" type="Integer" array="False" size=""/>
+            <assign variable="k" expression="1"/>
+            <assign variable="n" expression="2"/>
+            <assign variable="m" expression="2"/>
+            <declare name="a, rad, coseno, seno" type="Real" array="False" size=""/>
+            <declare name="C, A1" type="Integer" array="True" size="2*1"/>
+            <declare name="B" type="Integer" array="True" size="2*2"/>
+            <output expression="&quot;Vector&quot;" newline="True"/>
+            <for variable="z" start="0" end="m-1" direction="inc" step="1">
+                <for variable="i" start="0" end="k-1" direction="inc" step="1">
+                    <input variable="A1[z*m+i]"/>
+                </for>
+            </for>
+            <output expression="&quot;Matriz Transformacion&quot;" newline="True"/>
+            <input variable="a"/>
+            <assign variable="rad" expression="a*PI/180"/>
+            <assign variable="seno" expression="sin(rad)"/>
+            <assign variable="coseno" expression="cos(rad)"/>
+            <assign variable="B[0]" expression="coseno"/>
+            <assign variable="B[1]" expression="seno"/>
+            <assign variable="B[2]" expression="-seno"/>
+            <assign variable="B[3]" expression="coseno"/>
+            <for variable="j" start="0" end="n" direction="inc" step="1">
+                <for variable="i" start="0" end="k" direction="inc" step="1">
+                    <for variable="z" start="0" end="m" direction="inc" step="1">
+                        <assign variable="C[j*k+i]" expression="B[j*m+z]*A1[z*k+i]"/>
+                    </for>
+                </for>
+            </for>
+            <output expression="&quot;Vector Transformado&quot;" newline="True"/>
+            <for variable="j" start="0" end="n" direction="inc" step="1">
+                <for variable="i" start="0" end="k" direction="inc" step="1">
+                    <output expression="C[j*k+i]&amp;&quot; &quot;" newline="False"/>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

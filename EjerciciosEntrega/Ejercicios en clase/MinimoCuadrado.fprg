@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="paula"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-23 12:50:18 p.&#160;m."/>
+        <attribute name="created" value="cGF1bGE7TEFQVE9QLVEwTkk3SkxFOzIwMjItMTEtMjM7MDg6MjM6MjggYS7CoG0uOzMxNzU="/>
+        <attribute name="edited" value="cGF1bGE7TEFQVE9QLVEwTkk3SkxFOzIwMjItMTEtMjM7MTI6NTA6MTggcC7CoG0uOzQ7MzI5NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i" type="Integer" array="False" size=""/>
+            <declare name="a, f, g, suma, cuadrado" type="Real" array="False" size=""/>
+            <assign variable="f" expression="0"/>
+            <assign variable="g" expression="0"/>
+            <assign variable="suma" expression="0"/>
+            <assign variable="cuadrado" expression="0"/>
+            <output expression="&quot;Ingrese la cantidad de vectores: &quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="x, y" type="Real" array="True" size="n"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;Ingrese x: &quot;" newline="True"/>
+                <input variable="x[i]"/>
+                <output expression="&quot;Ingrese y: &quot;" newline="True"/>
+                <input variable="y[i]"/>
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="suma" expression="suma+(x[i]*y[i])"/>
+                <assign variable="cuadrado" expression="cuadrado+(x[i]*x[i])"/>
+                <assign variable="f" expression="f+x[i]"/>
+                <assign variable="g" expression="g+y[i]"/>
+            </for>
+            <if expression="(n*cuadrado)-(f*f)==0">
+                <then>
+                    <output expression="&quot;No se puede encontrar el valor ya que se divide por cero.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="a" expression="((n*suma)-(f*g))/((n*cuadrado)-(f*f))"/>
+                    <output expression="&quot;El valor del Minimo Cuadrado es de &quot;" newline="True"/>
+                    <output expression="a" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
